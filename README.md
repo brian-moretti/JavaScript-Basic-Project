@@ -16,5 +16,7 @@ The goal of this project is the build of a Counter, that shows 0 at the beginnin
 
 ### How can I see the project?
 
-You can easily see my project on the following links:
+You can easily see my project on the following link:
+
+:arrow_forward: [Netlify - Counter Project](https://endearing-lebkuchen-d32be1.netlify.app/)
 
