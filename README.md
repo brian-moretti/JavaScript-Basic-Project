@@ -19,6 +19,16 @@ No external libraries has been used neither other frameworks.
 - I decided to create a page that is also cool to see, so I spend some time to develop the style.
 - As final step, I tested the counter to see if everything works as it should, cleaned and fixed a bit the CSS code.
 
+### Updating Project after Coach's Feedback
+
+#### *My errors:*
+ - I used HTML to create the buttons of the counter instead of using JavaScript DOM.
+ - I used too many times 'addEventListener' method on buttons instead of a single function exploiting the JavaScript Event Delegation
+
+#### *How I Fix it:*
+ - _API's DOM_ with his method to create and manage the HTML elements
+ - Build a function(event) with _EventTarget interface_
+
 ## Link to the project
 
 You can easily see and test my project on the following link:
