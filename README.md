@@ -33,6 +33,6 @@ No external libraries has been used neither other frameworks.
 
 You can easily see and test my project on the following link:
 
-:arrow_forward: [Netlify - Counter Project](https://endearing-lebkuchen-d32be1.netlify.app/)
+:arrow_forward: [Netlify - Counter Project](https://counter-of-stars.netlify.app/)
 
 **Hope you like it, enjoy!**
