@@ -50,7 +50,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 60px;
   color: whitesmoke;
   position: absolute;
   margin: auto;
@@ -67,7 +67,7 @@ h2 {
 .counter-value {
   display: flex;
   justify-content: space-around;
-  height: 15vh;
+  height: 100px;
   align-items: center;
   width: 300px;
   position: absolute;
@@ -114,7 +114,7 @@ h2 {
     position: static;
     align-self: center;
     font-size: calc(32px + 2vw);
-    transform: translateY(50px);
+    transform: translateY(100px);
   }
 
   .container {
@@ -124,12 +124,12 @@ h2 {
 
   .counter-output {
     width: clamp(150px, calc(100px + 10vw), 200px);
-    height: clamp(8vh, calc(8vh + 1vh), 10vh);
+    height: clamp(50px, calc(5vh + 1vh), 60px);
   }
 
   .counter-value {
     width: clamp(200px, calc(200px + 10vw), 300px);
-    height: clamp(12vh, calc(12vh + 1vh), 15vh);
+    height: clamp(80px, calc(6vh + 1vh), 100px);
   }
 
   .add-value,
