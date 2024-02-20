@@ -1,101 +1,143 @@
-*, *::after, *::before{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    overflow: hidden;
-    background-image: url('/assets/images/counter-star.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  width: calc(100vw - 20%);
+  margin: 0 auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/assets/images/counter-star.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-h2{
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    z-index: 5;
-    font-family: 'Caveat', cursive;
-    font-size: 50px;
-    color: whitesmoke;
-
+h2 {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  z-index: 5;
+  font-family: "Caveat", cursive;
+  font-size: 50px;
+  color: whitesmoke;
+  align-self: flex-start;
 }
 
-.container{
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    margin: auto;
-    position: relative;
-    transform: translateY(40%);
-    background-color: transparent;
-    border: 2px solid whitesmoke;
-    box-shadow: 0 0 100px 10px whitesmoke;
- 
-
+.container {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  /*   transform: translateY(40%);
+ */
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  box-shadow: 0 0 100px 10px whitesmoke;
 }
 
-.counter-output{
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    color: whitesmoke;
-    position: absolute;
-    margin: auto;
-    right: 0;
-    left: 0;
-    top: 20%;
-    border-radius: 15px;
-    font-family: 'Inconsolata', monospace;
-    font-size: 35px;
-    border: 1px solid whitesmoke ;
-    box-shadow: 0 0 50px 3px whitesmoke inset;
-
+.counter-output {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  color: whitesmoke;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: 20%;
+  border-radius: 15px;
+  font-family: "Inconsolata", monospace;
+  font-size: 35px;
+  border: 1px solid whitesmoke;
+  box-shadow: 0 0 50px 3px whitesmoke inset;
 }
 
-.counter-value{
-    display: flex;
-    justify-content: space-around;
-    height: 15vh;
-    align-items: center;
-    width: 300px;
-    position: absolute;
-    margin: auto;
-    right: 0;
-    left: 0;
-    top: 45%;
-    border-radius: 20px;
-    border: 1px solid whitesmoke;
-    box-shadow: 0 0 80px 3px whitesmoke inset;
-
-
-
+.counter-value {
+  display: flex;
+  justify-content: space-around;
+  height: 15vh;
+  align-items: center;
+  width: 300px;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: 45%;
+  border-radius: 20px;
+  border: 1px solid whitesmoke;
+  box-shadow: 0 0 80px 3px whitesmoke inset;
 }
 
-.add-value, .reduce-value{
-    border-radius: 50%;
-    border: 0.5px solid whitesmoke;
-    background-color: #0f5b8a;
-    padding: 20px;
-    cursor: pointer;
-    font-family: 'Inconsolata', monospace;
-    font-size: 22px;
-    color: whitesmoke;
+.add-value,
+.reduce-value {
+  border-radius: 50%;
+  border: 0.5px solid whitesmoke;
+  background-color: #0f5b8a;
+  padding: 20px;
+  cursor: pointer;
+  font-family: "Inconsolata", monospace;
+  font-size: 22px;
+  color: whitesmoke;
 }
 
-.reset{
-    border: 0.5px solid #0f5b8a;
-    background-color: rgba(245, 245, 245, 0.6);
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    font-family: 'Inconsolata', monospace;
-    font-size: 21px;
-    font-weight: 600;
-    color: #0f5b8a;
+.reset {
+  border: 0.5px solid #0f5b8a;
+  background-color: rgba(245, 245, 245, 0.6);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Inconsolata", monospace;
+  font-size: 21px;
+  font-weight: 600;
+  color: #0f5b8a;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+
+    body{
+        background-size: cover;
+    }
+
+  h2 {
+    position: static;
+    align-self: center;
+    font-size: calc(32px + 2vw);
+    transform: translateY(50px);
+  }
+
+  .container {
+    width: clamp(250px, calc(235px + 10vw), 350px);
+    height: clamp(250px, calc(235px + 10vw), 350px);
+  }
+
+  .counter-output {
+    width: clamp(150px, calc(100px + 10vw), 200px);
+    height: clamp(8vh, calc(8vh + 1vh), 10vh);
+  }
+
+  .counter-value {
+    width: clamp(200px, calc(200px + 10vw), 300px);
+    height: clamp(12vh, calc(12vh + 1vh), 15vh);
+  }
+
+  .add-value,
+  .reduce-value {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .reset {
+    font-size: 16px;
+  }
 }
